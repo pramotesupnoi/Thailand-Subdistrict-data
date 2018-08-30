@@ -3,6 +3,7 @@ List of Thailand subdistrict data.
 
 ### Format
 - JSON
+- CSV
 
 ### Columns
 - subdistrict_id: Subdistrict ID
