@@ -4,20 +4,27 @@ List of Thailand subdistrict data.
 ### Format
 - JSON
 - CSV
+- XML
 
 ### Columns
-- subdistrict_id: Subdistrict ID
-- subdistrict_th: Subdistrict name in Thai
-- subdistrict_en: Subdistrict name in English
-- district_id:  District ID
-- district_th: District name in Thai
-- district_en: District name in English
-- province_id: Province ID
-- province_th: Province name in Thai
-- province_en: Province name in English
-- latitude: Subdistrict Latitude
-- lontitude: Subdistrict Lontitude
-- postcode : Postcode    
+|-- region_id  
+|-- region_th  
+|-- region_en  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- province_id: Province ID  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- province_th: Province name in Thai  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- province_en: Province name in English  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- district_id:  District ID  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- district_th: District name in Thai  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- district_en: District name in English  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- subdistrict_id: Subdistrict ID  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- subdistrict_th: Subdistrict name in Thai  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- subdistrict_en: Subdistrict name in English  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- latitude: Subdistrict Latitude  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- lontitude: Subdistrict Lontitude  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- postcode : Postcode  
+
+
+
 ### Data Source  
 [data.go.th](https://data.go.th)  
 Last update : 09/22/2018
