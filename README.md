@@ -1,30 +1,42 @@
 # Thailand-Subdistrict-data
-List of Thailand subdistrict data.
+ฐานข้อมูล ตำบล อำเภอ จังหวัด ในประเทศไทย
 
-### Format
+### รูปแบบของข้อมูล
 - JSON
 - CSV
 - XML
 - MySQL Command
 
-### Columns
-|-- region_id  
-|-- region_th  
-|-- region_en  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- province_id: Province ID  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- province_th: Province name in Thai  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- province_en: Province name in English  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- district_id:  District ID  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- district_th: District name in Thai  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- district_en: District name in English  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- subdistrict_id: Subdistrict ID  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- subdistrict_th: Subdistrict name in Thai  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- subdistrict_en: Subdistrict name in English  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- latitude: Subdistrict Latitude  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- lontitude: Subdistrict Lontitude  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|-- postcode : Postcode  
+### โครงสร้างตาราง
+#### ข้อมูล ภูมิภาค (region) 
+- region_id -> รหัสภูมิภาค
+- region_th -> ชื่อภาษาไทย 
+- region_en -> ชื่อภาษาอังกฤษ  
+รวมทั้งสิ้น 6 ภูมิภาค
 
+#### ข้อมูล จังหวัด (province) 
+- province_id -> รหัสจังหวัด
+- province_th -> ชื่อภาษาไทย 
+- province_en -> ชื่อภาษาอังกฤษ
+- region_id -> รหัสภูมิภาค
+  รวมทั้งสิ้น 77 จังหวัด
 
+#### ข้อมูล อำเภอ (district) 
+- district_id -> รหัสอำเภอ
+- district_th -> ชื่อภาษาไทย 
+- district_en -> ชื่อภาษาอังกฤษ
+- province_id -> รหัสจังหวัด
+  รวมทั้งสิ้น 928 อำเภอ
+
+#### ข้อมูล ตำบล (subdistrict) 
+- subdistrict_id -> รหัสตำบล
+- subdistrict_th -> ชื่อภาษาไทย 
+- subdistrict_en -> ชื่อภาษาอังกฤษ
+- latitude -> ละติจูด
+- lontitude -> ลองติจูด
+- postcode -> รหัสไปรษณีย์
+- district_id -> รหัสอำเภอ
+  รวมทั้งสิ้น 7375 ตำบล (มีข้อมูลตำแหน่งที่ตั้ง 7311 รายการ มีข้อมูลรหัสไปรษณีย์ 6764 รายการ)
 
 ### Data Source  
 [data.go.th](https://data.go.th)  
