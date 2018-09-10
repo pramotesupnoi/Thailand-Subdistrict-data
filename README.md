@@ -5,6 +5,7 @@ List of Thailand subdistrict data.
 - JSON
 - CSV
 - XML
+- MySQL Command
 
 ### Columns
 |-- region_id  
